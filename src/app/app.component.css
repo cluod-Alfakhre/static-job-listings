@@ -1,3 +1,4 @@
+/* you will notise that the content is stretching when a single box is displayed that's becuase the scroll bar is disappeared */
 main{
     min-height: 100vh;
     background-color: hsl(180, 31%, 95%);
