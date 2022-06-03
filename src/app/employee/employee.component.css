@@ -13,7 +13,7 @@
     position: relative;
 }
 .container.top{
-    border-left: solid 4px hsl(180, 29%, 50%);
+    border-left: solid 5px hsl(180, 29%, 50%);
 }
 .main-content{
     display: flex;
