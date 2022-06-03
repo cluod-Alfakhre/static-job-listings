@@ -70,6 +70,9 @@ section{
     padding: 3rem 20px;
 }
 @media(max-width:950px){
+    nav{
+        background-image: url(src\assets\images\bg-header-mobile.svg);
+    }
     .filter{
         bottom: -28%;
     }
