@@ -1,6 +1,6 @@
 /* you will notise that the content is stretching when a single box is displayed that's becuase the scroll bar is disappeared */
 main{
-    min-height: 100vh;
+    min-height: 101vh;
     background-color: hsl(180, 31%, 95%);
 }
 nav{
@@ -66,8 +66,8 @@ nav{
 }
 section{
     display: grid;
-    gap: 3rem;
-    padding: 3rem 20px;
+    gap: 1.8rem;
+    padding: 4.4rem 20px 7.8rem;
 }
 @media(max-width:950px){
     nav{
