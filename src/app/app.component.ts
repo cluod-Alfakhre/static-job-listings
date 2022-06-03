@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { MainService } from './main.service';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
   title = 'static-job-listings';
+
+  constructor(public mainService:MainService){}
+
+  ngOnInit(){
+   this.mainService.getEmployeesArray().subscribe((data:any)=>{
+    this.mainService.employeesArray=data;
+   })
+  }
+  
+  
 }

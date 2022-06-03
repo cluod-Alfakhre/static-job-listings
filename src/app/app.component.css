@@ -1,0 +1,83 @@
+main{
+    min-height: 100vh;
+    background-color: hsl(180, 31%, 95%);
+}
+nav{
+    min-height: 155px;
+    background-image: url(src\assets\images\bg-header-desktop.svg);
+    background-color:  hsl(180, 29%, 50%);
+    background-size:cover;
+    background-position: center;
+    display: grid;
+    align-items: flex-end;
+    padding: 0 20px;
+}
+.filter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1120px;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    position: relative;
+    bottom: -15%;
+    box-shadow: 5px 5px 10px 5px hsl(180deg 29% 50% / 20%);
+    border-radius: 6px;
+}
+.filter .content{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.filter .content div{
+    color: hsl(180, 29%, 50%);
+    background-color: hsl(180, 31%, 95%);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+}
+.filter .content div p{
+    padding: 5px;
+}
+.filter .content div .delete{
+    color: white;
+    background-color: hsl(180, 29%, 50%);
+    border-left: 1px solid hsl(180, 29%, 50%);
+    padding: 5px;
+}
+.filter .content div .delete:hover{
+    color: white;
+    background-color: black;
+}
+.filter .clear {
+    all: unset;
+    color: hsl(180, 29%, 50%);
+    cursor: pointer;
+}
+.filter .clear:hover{
+    text-decoration: underline;
+}
+section{
+    display: grid;
+    gap: 3rem;
+    margin: 3rem 0;
+    padding: 0 20px;
+}
+@media(max-width:950px){
+    .filter{
+        bottom: -28%;
+    }
+    .filter .content{
+        flex-wrap: wrap;
+    }
+    section{
+        gap: 5rem;
+        margin: 8rem 0;
+    }
+}

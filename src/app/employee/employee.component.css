@@ -1,0 +1,126 @@
+.container{
+    background-color: #fff;
+    box-shadow: 5px 5px 10px 5px hsl(180deg 29% 50% / 20%);
+    border-radius: 5px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr auto;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1120px;
+    position: relative;
+}
+.container.top{
+    border-left: solid 4px hsl(180, 29%, 50%);
+}
+.main-content{
+    display: flex;
+    gap: 1rem;
+}
+.text{
+    display: grid;
+    gap: 8px;
+}
+.text .company-data{
+    display: flex;
+    gap: 1rem;
+}
+.company-data .company-name{
+    font-size: 18px;
+    color: hsl(180, 29%, 50%);
+}
+.company-data .new{
+    font-size: 14px;
+    color: white;
+    background-color: hsl(180, 29%, 50%);
+    border-radius: 1rem;
+    padding: 0px 7px;
+    display: grid;
+    align-items: center;
+}
+.company-data .featured{
+    font-size: 14px;
+    color: white;
+    background-color: hsl(180, 14%, 20%);
+    border-radius: 1rem;
+    padding: 0px 7px;
+    display: grid;
+    align-items: center;
+}
+.text .position h3{
+    color: hsl(180, 14%, 20%);
+    font-size: 21px;
+    transition: .2s;
+    cursor: pointer;
+}
+.text .position h3:hover{
+    color: hsl(180, 29%, 50%);
+}
+.text .job-details{
+    display: flex;
+    gap: 1rem;
+}
+.text .job-details span{
+    font-size: 18px;
+    color: hsl(180, 8%, 52%);
+}
+.categories{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.categories span{
+    color: hsl(180, 29%, 50%);
+    background-color: hsl(180, 31%, 95%);
+    border-radius: 5px;
+    padding: 8px;
+    cursor: pointer;
+    transition: .2s;
+}
+.categories .tools{
+    display: flex;
+    gap: 1rem;
+}
+.categories span:hover{
+    color: white;
+    background-color: hsl(180, 29%, 50%);
+}
+@media(max-width:950px){
+    .container{
+        grid-template-columns: 1fr;
+    }
+    .main-content{
+        flex-direction: column;
+        padding-top: 10px;
+    }
+    .avatar img{
+        position: absolute;
+        top: -13%;
+        width: 75px;
+    }
+    .categories{
+        padding-top: 1rem;
+        border-top: solid 1px hsl(180, 8%, 52%);
+    }
+    .company-data .company-name{
+        font-size: 18px;
+    }
+    .company-data .new{
+        font-size: 12px;
+    }
+    .company-data .featured{
+        font-size: 12px;
+    }
+    .text .position h3{
+        font-size: 17px;
+    }
+    .text .job-details span{
+        font-size: 15px;
+    }
+    .categories span{
+        font-size: 14px;
+    }
+}
