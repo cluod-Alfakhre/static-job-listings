@@ -1,11 +1,13 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input,ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { MainService } from '../main.service';
 
 @Component({
   selector: 'app-employee',
   templateUrl: './employee.component.html',
-  styleUrls: ['./employee.component.css']
+  styleUrls: ['./employee.component.css'],
+  encapsulation: ViewEncapsulation.None,
+
 })
 export class EmployeeComponent implements OnInit {
 
