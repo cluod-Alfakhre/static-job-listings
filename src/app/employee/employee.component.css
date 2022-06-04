@@ -49,13 +49,13 @@
     display: grid;
     align-items: center;
 }
-.text .position h3{
+.text .position h1{
     color: hsl(180, 14%, 20%);
     font-size: 21px;
     transition: .2s;
     cursor: pointer;
 }
-.text .position h3:hover{
+.text .position h1:hover{
     color: hsl(180, 29%, 50%);
 }
 .text .job-details{
@@ -114,7 +114,7 @@
     .company-data .featured{
         font-size: 12px;
     }
-    .text .position h3{
+    .text .position h1{
         font-size: 17px;
     }
     .text .job-details span{
