@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { MainService } from './main.service';
-import { ActivatedRoute } from '@angular/router';
+import { EmployeeModel } from './employee/models/employee.model';
 
 
 @Component({
@@ -16,9 +16,15 @@ export class AppComponent {
   constructor(public mainService:MainService){}
 
   ngOnInit(){
-   this.mainService.getEmployeesArray().subscribe((data:any)=>{
+
+   this.mainService.getEmployeesArray().subscribe((data:EmployeeModel[])=>{
+
     this.mainService.employeesArray=data;
+
+    this.mainService.filterContent(this.mainService.filterKeys)
+
    })
+   
   }
   
   

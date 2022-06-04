@@ -1,21 +1,32 @@
 <main>
+
   <nav>
     <div class="filter" *ngIf="mainService.filterKeys.length != 0">
+
       <div class="content">
+
         <div *ngFor="let key of mainService.filterKeys; index as i">
           <p>{{key}}</p>
+
           <span class="delete" (click)="mainService.delete(i)">x</span>
         </div>
+
       </div>
+
       <button class="clear" (click)="mainService.clearArray()">Clear</button>
+
     </div>
   </nav>
+
   <section>
+
     <app-employee 
-    *ngFor="let employee of this.mainService.employeesArray"
-    [employee]="employee"
-    >
+      *ngFor="let employee of this.mainService.filteredArray"
+      [employee]="employee"
+      >
     </app-employee>
+
   </section>
+
 </main>
 

@@ -1,36 +1,49 @@
 <div class="container" [class.top]="employee.id == 1 || employee.id == 2">
+
     <div class="main-content">
+
         <div class="avatar">
             <img [src]="'assets'+employee.logo" alt="avatar">
         </div>
+
         <div class="text">
+
             <div class="company-data">
                 <h1 class="company-name">{{employee.company}}</h1>
                 <h2 class="new" *ngIf="employee.new">NEW!</h2>
                 <h2 class="featured" *ngIf="employee.featured">FEATURED</h2>
             </div>
+
             <div class="position">
                 <h1>{{employee.position}}</h1>
             </div>
+
             <div class="job-details">
                 <span>{{employee.postedAt}}</span>
                 <span>{{employee.contract}}</span>
                 <span>{{employee.location}}</span>
             </div>
+
         </div>
+
     </div>
+
     <div class="categories">
-        <span (click)="addqueryString(employee.role)">{{employee.role}}</span>
-        <span (click)="addqueryString(employee.level)">{{employee.level}}</span>
-        <span *ngFor="let language of employee.languages" (click)="addqueryString(language)">{{language}}</span>
-        <div class="tools"
-            *ngIf="employee.tools.length != 0"
-            >
-            <span *ngFor="let tool of employee.tools"
-            (click)="addqueryString(tool)"
-            >
-                {{tool}}
-            </span>
-        </div>
+
+        <span (click)="filterByKey(employee.role)">{{employee.role}}</span>
+
+        <span (click)="filterByKey(employee.level)">{{employee.level}}</span>
+
+        <span *ngFor="let language of employee.languages" 
+            (click)="filterByKey(language)">
+            {{language}}
+        </span>
+       
+        <span *ngFor="let tool of employee.tools"
+            (click)="filterByKey(tool)">
+            {{tool}}
+        </span>
+        
     </div>
+
 </div>

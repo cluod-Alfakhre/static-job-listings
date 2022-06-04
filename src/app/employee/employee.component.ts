@@ -1,6 +1,6 @@
 import { Component, OnInit,Input,ViewEncapsulation } from '@angular/core';
-import { Router } from '@angular/router';
 import { MainService } from '../main.service';
+import { EmployeeModel } from './models/employee.model';
 
 @Component({
   selector: 'app-employee',
@@ -11,21 +11,24 @@ import { MainService } from '../main.service';
 })
 export class EmployeeComponent implements OnInit {
 
-  @Input() employee:any;
+  @Input() employee!:EmployeeModel;
 
-  constructor(private router:Router,private mainService:MainService) { }
+  constructor(private mainService:MainService) { }
 
   ngOnInit(): void {
     
   }
 
  
-  addqueryString(theQuery:any){
-    if(this.mainService.filterKeys.indexOf(theQuery) == -1){
-      this.mainService.filterKeys.push(theQuery);
+  filterByKey(key:any){
+
+    if(this.mainService.filterKeys.indexOf(key) == -1){//if the key was not exist before then add it
+
+      this.mainService.filterKeys.push(key);
+
     }
-    this.mainService.filterContent(this.mainService.filterKeys)
-    console.log(this.mainService.filteredArray)
+
+    this.mainService.filterContent(this.mainService.filterKeys)//after adding a key invoke filter function
 
   }
 }
